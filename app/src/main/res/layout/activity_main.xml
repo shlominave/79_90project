@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/totalcustomET"
+        android:layout_width="74dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintStart_toEndOf="@+id/customtotalTextView"
+        app:layout_constraintTop_toTopOf="@+id/customtotalTextView" />
+
+    <TextView
+        android:id="@+id/tvCustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="custom"
+        app:layout_constraintStart_toStartOf="@+id/tvTotal"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotal" />
+
+    <TextView
+        android:id="@+id/tvbilltotal"
+        android:layout_width="87dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="36dp"
+        android:text="Bill total"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv10"
+        android:layout_width="46dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="32dp"
+        android:text="10%"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/billET" />
+
+    <TextView
+        android:id="@+id/tv20"
+        android:layout_width="46dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="36dp"
+        android:text="20%"
+        app:layout_constraintStart_toEndOf="@+id/tv10"
+        app:layout_constraintTop_toTopOf="@+id/tv10" />
+
+    <TextView
+        android:id="@+id/tv30"
+        android:layout_width="46dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="36dp"
+        android:text="30%"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toEndOf="@+id/tv20"
+        app:layout_constraintTop_toTopOf="@+id/tv20" />
+
+    <TextView
+        android:id="@+id/tvTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="56dp"
+        android:text="Tip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv10" />
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Total"
+        app:layout_constraintStart_toStartOf="@+id/tvTip"
+        app:layout_constraintTop_toBottomOf="@+id/tvTip" />
+
+    <SeekBar
+        android:id="@+id/CustomseekBar"
+        android:layout_width="180dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@+id/tvCustom"
+        app:layout_constraintTop_toTopOf="@+id/tvCustom" />
+
+    <TextView
+        android:id="@+id/CustomTipTextView"
+        android:layout_width="41dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toEndOf="@+id/CustomseekBar"
+        app:layout_constraintTop_toTopOf="@+id/CustomseekBar" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="51dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="56dp"
+        android:text="tip"
+        app:layout_constraintStart_toStartOf="@+id/tvCustom"
+        app:layout_constraintTop_toBottomOf="@+id/tvCustom" />
+
+    <TextView
+        android:id="@+id/customtotalTextView"
+        android:layout_width="44dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:text="Total"
+        app:layout_constraintStart_toEndOf="@+id/tipcustomEditText"
+        app:layout_constraintTop_toTopOf="@+id/tipcustomEditText" />
+
+    <EditText
+        android:id="@+id/billET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/tvbilltotal"
+        app:layout_constraintTop_toTopOf="@+id/tvbilltotal" />
+
+    <EditText
+        android:id="@+id/tipcustomEditText"
+        android:layout_width="74dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

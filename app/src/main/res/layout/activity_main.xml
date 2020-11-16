@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textview5"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -16,7 +17,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toEndOf="@+id/customtotalTextView"
-        app:layout_constraintTop_toTopOf="@+id/customtotalTextView" />
+        app:layout_constraintTop_toTopOf="@+id/customtotalTextView"
+        android:focusable="false"
+        android:longClickable="false"
+        android:gravity="center"/>
 
     <TextView
         android:id="@+id/tvCustom"
@@ -50,24 +54,24 @@
         app:layout_constraintTop_toBottomOf="@+id/billET" />
 
     <TextView
+        android:id="@+id/tv15"
+        android:layout_width="46dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="36dp"
+        android:text="15%"
+        app:layout_constraintStart_toEndOf="@+id/tv10"
+        app:layout_constraintTop_toTopOf="@+id/tv10" />
+
+    <TextView
         android:id="@+id/tv20"
         android:layout_width="46dp"
         android:layout_height="33dp"
         android:layout_marginStart="36dp"
         android:text="20%"
-        app:layout_constraintStart_toEndOf="@+id/tv10"
-        app:layout_constraintTop_toTopOf="@+id/tv10" />
-
-    <TextView
-        android:id="@+id/tv30"
-        android:layout_width="46dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="36dp"
-        android:text="30%"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.134"
-        app:layout_constraintStart_toEndOf="@+id/tv20"
-        app:layout_constraintTop_toTopOf="@+id/tv20" />
+        app:layout_constraintStart_toEndOf="@+id/tv15"
+        app:layout_constraintTop_toTopOf="@+id/tv15" />
 
     <TextView
         android:id="@+id/tvTip"
@@ -81,8 +85,8 @@
 
     <TextView
         android:id="@+id/tvTotal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="33dp"
+        android:layout_height="24dp"
         android:layout_marginTop="40dp"
         android:text="Total"
         app:layout_constraintStart_toStartOf="@+id/tvTip"
@@ -107,21 +111,23 @@
         app:layout_constraintTop_toTopOf="@+id/CustomseekBar" />
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="51dp"
-        android:layout_height="23dp"
+        android:id="@+id/tiptv"
+        android:layout_width="53dp"
+        android:layout_height="52dp"
         android:layout_marginTop="56dp"
-        android:text="tip"
+        android:text="Tip:"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/tvCustom"
         app:layout_constraintTop_toBottomOf="@+id/tvCustom" />
 
     <TextView
         android:id="@+id/customtotalTextView"
-        android:layout_width="44dp"
-        android:layout_height="23dp"
+        android:layout_width="66dp"
+        android:layout_height="65dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="4dp"
-        android:text="Total"
+        android:text="Total:"
+        android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/tipcustomEditText"
         app:layout_constraintTop_toTopOf="@+id/tipcustomEditText" />
 
@@ -142,7 +148,90 @@
         android:layout_marginStart="24dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toTopOf="@+id/textView5" />
+        app:layout_constraintStart_toEndOf="@+id/tiptv"
+        app:layout_constraintTop_toTopOf="@+id/tiptv"
+        android:focusable="false"
+        android:longClickable="false"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/tip10ET"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/tvTip"
+        app:layout_constraintTop_toBottomOf="@+id/tv15"
+        android:focusable="false"
+        android:longClickable="false"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/tip15ET"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/tip10ET"
+        app:layout_constraintTop_toTopOf="@+id/tip10ET"
+        android:focusable="false"
+        android:longClickable="false"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/tip20ET"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="17dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/tip15ET"
+        app:layout_constraintTop_toTopOf="@+id/tip15ET"
+        android:focusable="false"
+        android:longClickable="false"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/total10ET"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/tvTotal"
+        app:layout_constraintTop_toBottomOf="@+id/tip15ET"
+        android:focusable="false"
+        android:longClickable="false"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/total15ET"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/total10ET"
+        app:layout_constraintTop_toTopOf="@+id/total10ET"
+        android:focusable="false"
+        android:longClickable="false"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/total20ET"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/total15ET"
+        app:layout_constraintTop_toTopOf="@+id/total15ET"
+        android:focusable="false"
+        android:longClickable="false"
+        android:gravity="center"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
